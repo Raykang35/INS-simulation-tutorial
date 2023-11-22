@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH -C cpu
+#SBATCH -q regular
+#SBATCH -t 01:00:00
+#SBATCH -N 5
+#SBATCH -J PDPPT_CCTT_mol_inabox
+#SBATCH --ntasks-per-node=64
+#SBATCH --output=out.out 
+#SBATCH --error=err.out 
+
+module load vasp/5.4.4-cpu
+export VASP_PP_PATH=/global/common/sw/cray/cnl7/mic_knl/vasp/pseudopotentials/PBE/
+export ASE_VASP_VDW=/global/common/sw/cray/cnl7/mic_knl/vasp/vdw_kernal/
+
+srun -n 320 -c 4 --cpu-bind=cores vasp_std 
+

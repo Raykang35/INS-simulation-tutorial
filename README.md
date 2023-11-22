@@ -1,6 +1,6 @@
 # INS-simulation-tutorial
 
-Optimization material structure using VASP, we need 4 files as input.
+Optimization material structure using VASP, we need 4 files as input. \n
 (1) INCAR (The central input file of VASP, which determines what to do and how to do it.)
 (2) POSCAR (Crystal structure)
 (3) POTCAR (Pseudopotential)

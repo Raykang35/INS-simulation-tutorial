@@ -24,13 +24,14 @@ The next step is creating displacements using phonopy (https://phonopy.github.io
 4. Submit all the calculations in each folder, command: `for i in {001..#}; do cd $i; sbatch runfile; cd ..; done`
 
 Now, we have force constants from all calculations from previous step. Let's do the post process
-1. command: `phonopy -f {001..#}/vasprun.xml` to create FORCE_SETS
+1. command: `phonopy -f {001..#}/vasprun.xml` to create FORCE_SETS.
 2. Mesh sampling calculation, prepare the file "mesh.conf".
 3. ```
-   ATOM_NAME = C O H .....
-   DIM = a b c
+   ATOM_NAME = C O H
+   DIM = 2 2 2
    MP = 8 8 8
    EIGENVECTORS = .TRUE.
    ```
-4. `phonopy -p mesh.conf` to get DOS
+4. `phonopy -p mesh.conf` to calculate phonons and DOS. We will get "phonopy.yaml" and "mesh.yaml" file.
 
+Last, use OCLIMAX to draw INS spectrum.

@@ -15,6 +15,10 @@ After simulation, we will get lots of files
 4. XDATCAR (Contains updated ionic positions of each ionic step)
 5. DOSCAR (Contains the total and integrated DOS and optionally the local partial DOS)
 6. WAVECAR (Contains the wave function coefficients)
+7. vasprun.xml (Main output file in xml format)
+8. EIGENVAL (Contains Kohn-Sham eigenvalues for each k point after the end of the calculation)
+9. IBZKPT (Contains k-point coordinates and weights)
+10. CHGCAR (Stores the charge density and the PAW one-center occupancies and can be used for restarting VASP calculations)
 
 
 The next step is creating displacements using phonopy (https://phonopy.github.io/phonopy/), depends on the size of molecules, we will get different number of POSCARs. By doing this step, we will get set of forces.

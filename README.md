@@ -12,8 +12,9 @@ After simulation, we will get lots of files
 1. CONTCAR (Updated geometry data at the end of a run)
 2. OUTCAR (Gives detailed output of a VASP run, including a summary of the used input parameters; Information about the electronic steps, KS-eigenvalues; Stress tensors; Forces on the atoms; Local charges and magnetic moments; Dielectric properties)
 3. OSZICAR (Chosen SCF algorithm; Convergence of the total energy, charge- and spin densities; Free energies; Magnetic moments of the cell)
-4. XDATCAR
-5. DOSCAR
+4. XDATCAR (Contains updated ionic positions of each ionic step)
+5. DOSCAR (Contains the total and integrated DOS and optionally the local partial DOS)
+6. WAVECAR (Contains the wave function coefficients)
 
 
 The next step is creating displacements using phonopy (https://phonopy.github.io/phonopy/), depends on the size of molecules, we will get different number of POSCARs.

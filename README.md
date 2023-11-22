@@ -35,3 +35,4 @@ Now, we have force constants from all calculations from previous step. Let's do 
 4. `phonopy -p mesh.conf` to calculate phonons and DOS. We will get "phonopy.yaml" and "mesh.yaml" file.
 
 Last, use OCLIMAX to draw INS spectrum.
+`python3.9 /global/common/software/m2734/scipts/oclimax.py`

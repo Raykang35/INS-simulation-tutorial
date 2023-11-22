@@ -13,3 +13,6 @@ After simulation, we will get lots of files
 3. OSZICAR (Chosen SCF algorithm; Convergence of the total energy, charge- and spin densities; Free energies; Magnetic moments of the cell)
 4. XDATCAR
 5. DOSCAR
+
+
+The next step is creating displacements using phonopy, depends on the size of molecules, we will get different number of POSCARs.

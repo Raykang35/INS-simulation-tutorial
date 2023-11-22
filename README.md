@@ -25,5 +25,12 @@ The next step is creating displacements using phonopy (https://phonopy.github.io
 
 Now, we have force constants from all calculations from previous step. Let's do the post process
 1. command: `phonopy -f {001..#}/vasprun.xml` to create FORCE_SETS
-2. Mesh sampling calculation, prepare the file "mesh.conf". 
+2. Mesh sampling calculation, prepare the file "mesh.conf".
+3. ```
+   ATOM_NAME = C O H .....
+   DIM = a b c
+   MP = 8 8 8
+   EIGENVECTORS = .TRUE.
+   ```
+4. `phonopy -p mesh.conf` to get DOS
 

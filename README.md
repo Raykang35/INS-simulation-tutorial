@@ -19,11 +19,11 @@ After simulation, we will get lots of files
 
 The next step is creating displacements using phonopy (https://phonopy.github.io/phonopy/), depends on the size of molecules, we will get different number of POSCARs. By doing this step, we will get set of forces.
 1. command: `phonopy -d --dim="x y z" -c POSCAR`. x, y, z are supercell sizes. We will get POSCARs and phonopy_disp.yaml (contains information used to create supercells with displacements)
-2. Then we rename the POSCARs and put into subfolders, command: for i in {001..#}; do mkdir $i; mv POSCAR-$i $i/POSCAR; done. We also need to copy all the other input files into each folder.
+2. Then we rename the POSCARs and put into subfolders, command: `for i in {001..#}; do mkdir $i; mv POSCAR-$i $i/POSCAR; done` We also need to copy all the other input files into each folder.
 3. Change the # of NSW (the number of maximum ionic steps) into 0. We can also reduce KPOINTS grid.
-4. Submit all the calculations in each folder, command: for i in {001..#}; do cd $i; sbatch runfile; cd ..; done.
+4. Submit all the calculations in each folder, command: `for i in {001..#}; do cd $i; sbatch runfile; cd ..; done`
 
 Now, we have force constants from all calculations from previous step. Let's do the post process
-1. command: phonopy -f {001..#}/vasprun.xml to create FORCE_SETS
+1. command: `phonopy -f {001..#}/vasprun.xml` to create FORCE_SETS
 2. Mesh sampling calculation, prepare the file "mesh.conf". 
 

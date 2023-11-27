@@ -41,3 +41,7 @@ Now, we have force constants from all calculations from previous step. Let's do 
 
 Last, use OCLIMAX to draw INS spectrum.
 `python3.9 /global/common/software/m2734/scipts/oclimax.py`
+
+
+Second part: 
+Open babel transfer file command `obabel -i <input_file_extension> input_file -o <output_file_extension> -O output_file`

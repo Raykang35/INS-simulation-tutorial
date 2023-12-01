@@ -45,3 +45,7 @@ Last, use OCLIMAX to draw INS spectrum.
 
 Second part: 
 Open babel transfer file command `obabel -i <input_file_extension> input_file -o <output_file_extension> -O output_file`
+
+References
+1. https://www.vasp.at/wiki/index.php/The_VASP_Manual
+2. J. Chem. Theory Comput. 2019, 15, 3, 1974–1982

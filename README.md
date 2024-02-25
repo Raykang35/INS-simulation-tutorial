@@ -4,7 +4,7 @@ Optimization material structure using VASP, we need 4 files as input.
 
 1. INCAR (The central input file of VASP, which determines what to do and how to do it.)
 2. POSCAR (Crystal structure)
-3. POTCAR (Pseudopotential) `cat /global/common/software/m2734/potentials_vasp/X/POTCAR>> POTCAR` X is the element.
+3. POTCAR (Pseudopotential) `cat /global/common/software/m2734/ray/potentials_vasp/X/POTCAR>> POTCAR` X is the element.
 4. KPOINTS (Mesh grid)
 Using NERSC (HPC), we also need a run file to submit the calculation.
 

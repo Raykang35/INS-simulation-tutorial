@@ -5,7 +5,7 @@ INCAR
  EDIFFG = -5.00e-02 # Defines the break condition for the ionic relaxation loop
  GGA = PE # PBE sudopotential
  PREC = Accurate
- IBRION = 1 # Ionic relaxation (RMM-DIIS)
+ IBRION = 2 # Ionic relaxation (RMM-DIIS)
  ISIF = 2 # Determines which degrees of freedom, 2 means optimize geometry but not cell volume or shape
  ISMEAR = 0 # Smearing, here we use Gaussian smearing
  NPAR = 16 # Determines the number of bands that are treated in parallel

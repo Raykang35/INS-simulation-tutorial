@@ -1,7 +1,7 @@
 INCAR
  ENCUT = 520.000000 # Energy Cutoff
  SIGMA = 0.050000
- EDIFF = 1.00e-04 # Stopping criteria for ESC (1.00e-06)
+ EDIFF = 1.00e-04 # (Accurate=1.00e-06) The relaxation of the electronic degrees of freedom stops if the total (free) energy change and the band-structure-energy change (eigenvalues) between two steps are both smaller than EDIFF (in eV)
  EDIFFG = -5.00e-02 # Defines the break condition for the ionic relaxation loop (-1.00e-02 for accurate)
  GGA = PE # PBE sudopotential
  PREC = Accurate

@@ -8,6 +8,7 @@ Optimization material structure using VASP, we need 4 files as input.
 4. KPOINTS (Mesh grid)
 
 We can use vaspkit to generate input files (https://vaspkit.com/index.html)
+
 Using NERSC (HPC), we also need a run file to submit the calculation.
 
 After simulation, we will get lots of files

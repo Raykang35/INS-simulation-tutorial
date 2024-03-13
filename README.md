@@ -4,7 +4,7 @@ Optimization material structure using VASP, we need 4 files as input.
 
 1. INCAR (The central input file of VASP, which determines what to do and how to do it.)
 2. POSCAR (Crystal structure)
-3. POTCAR (Pseudopotential) `cat /global/common/software/m2734/ray/potentials_vasp/X/POTCAR>> POTCAR` X is the element. There is new POTCAR file `/global/common/software/nersc/pm-2022q2/sw/vasp/pseudopotentials/PBE/potpaw_PBE/<the element>/POTCAR>> POTCAR`
+3. POTCAR (Pseudopotential) `cat /global/common/software/m2734/ray/potentials_vasp/X/POTCAR>> POTCAR` X is the element. There is new POTCAR file `/global/common/software/nersc/pm-2022q2/sw/vasp/pseudopotentials/PBE/potpaw_PBE.54/<the element>/POTCAR>> POTCAR`
 4. KPOINTS (Mesh grid)
 
 We can use vaspkit to generate input files (https://vaspkit.com/index.html), GNU-parallel (https://www.gnu.org/software/parallel/sphinx.html)

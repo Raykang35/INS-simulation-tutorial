@@ -7,7 +7,7 @@ Optimization material structure using VASP, we need 4 files as input.
 3. POTCAR (Pseudopotential) `cat /global/common/software/m2734/ray/potentials_vasp/X/POTCAR>> POTCAR` X is the element. There is new POTCAR file `/global/common/software/nersc/pm-2022q2/sw/vasp/pseudopotentials/PBE/potpaw_PBE.54/<the element>/POTCAR>> POTCAR`
 4. KPOINTS (Mesh grid)
 
-We can use vaspkit to generate input files (https://vaspkit.com/index.html), GNU-parallel (https://www.gnu.org/software/parallel/sphinx.html)
+We can use vaspkit to generate input files (https://vaspkit.com/index.html), GNU-parallel (https://www.gnu.org/software/parallel/sphinx.html), packmol is the next software i want to learn.
 
 Using NERSC (HPC), we also need a run file to submit the calculation.
 

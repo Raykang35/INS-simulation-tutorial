@@ -1,0 +1,28 @@
+# Mantid plot exp data
+# import mantid algorithms, numpy and matplotlib
+from mantid.simpleapi import *
+import matplotlib.pyplot as plt
+import numpy as np
+
+data1 = Load("/Users/raykang35/PhD_work/XD_polymer/NBG_VIS_PDPPT_C8C6_deuterated_at_5K.dat")
+dataout = ConvertAxisByFormula(InputWorkspace=data1,
+                              Axis="X",
+                              Formula="x*8.06554")
+plotSpectrum(dataout,2, error_bars=True)
+
+
+fig, axes = plt.gcf(), plt.gca()
+
+# Rescale the axis limits
+axes.set_xlim(20,3500)
+axes.set_ylim(0,5)
+
+#C hange the y-axis label
+axes.set_ylabel('Intensity a.u.')
+axes.set_xlabel('Energy (cm-1)')
+
+# Add legend entries
+axes.legend(['DPP-4T Deuterated C8C6'])
+
+# Give the graph a modest title
+plt.title("EXP")

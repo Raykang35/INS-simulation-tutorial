@@ -12,6 +12,6 @@ INCAR
  NSW = 1000 # The maximum number of ionic steps
  NWRITE = 1
  LCHARG = .FALSE.
- LWAVE = .FALSE.
+ LWAVE = .FALSE. # .TRUE.
  LREAL = .FALSE.
 

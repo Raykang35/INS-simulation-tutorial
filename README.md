@@ -46,7 +46,7 @@ Last, use OCLIMAX to draw INS spectrum.
 `python3.9 /global/common/software/m2734/ray/oclimax.py`
 
 Analyze one atom contribution to the spectra:
-Use AnalyzeMode.py
+python3.9 AnalyzeModes.py
 
 Second part: 
 Open babel transfer file command `obabel -i <input_file_extension> input_file -o <output_file_extension> -O output_file`

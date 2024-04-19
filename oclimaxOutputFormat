@@ -3,3 +3,14 @@ BEGIN LATTICE
     yx    yy     yz
     zx    zy     zz
 END LATTICE
+
+BEGIN ATOMS
+       (# of atoms)  (element name)  (atomic number)  (atomic weight)   (x)  (y)  (z)  (total CS) (incoherent CS) (coherent scattering length)  (0.00000)
+       (# of atoms)  (element name)  (atomic number)  (atomic weight)   (x)  (y)  (z)  (total CS) (incoherent CS) (coherent scattering length)  (0.00000)
+END ATOMS
+
+BEGIN FREQUENCIES
+!MODE# FREQUENCY
+    (# of mode)    (wavenumber)
+ 0.062500      0.062500     0.062500      0.003906
+  (# of atoms)  (element name)  (atomic number)   -0.003481     0.000000     0.001690     0.019272    -0.000199    -0.001185

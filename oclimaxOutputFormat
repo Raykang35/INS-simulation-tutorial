@@ -1,0 +1,5 @@
+BEGIN LATTICE
+    xx    xy     xz
+    yx    yy     yz
+    zx    zy     zz
+END LATTICE

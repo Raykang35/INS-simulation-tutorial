@@ -1,4 +1,4 @@
-# INS-simulation-tutorial
+# DFT-INS-simulation-tutorial
 
 Optimization material structure using VASP, we need 4 files as input. 
 

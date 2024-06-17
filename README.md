@@ -27,7 +27,7 @@ After simulation, we will get lots of files
 The next step is creating displacements using phonopy (https://phonopy.github.io/phonopy/), depends on the size of molecules, we will get different number of POSCARs. By doing this step, we will get set of forces.
 1. Copy CONTCAR file from optimization step, `cp ../CONTCAR .`. Then, rename to POSCAR `mv CONTCAR POSCAR`
 2. command: `phonopy -d --dim="x y z" -c POSCAR`. x, y, z are supercell sizes. We will get POSCARs and phonopy_disp.yaml (contains information used to create supercells with displacements)
-3. Then we rename the POSCARs and put into subfolders, command: `for i in {001..#}; do mkdir $i; mv POSCAR-$i $i/POSCAR; done` We also need to copy all the other input files (INCAR, POTCAR, KPOINTS, and run file) into each folder, `parallel "cd {} && cp ../run ." ::: {001..nnn}`.
+3. Then we rename the POSCARs and put into subfolders, command: `parallel "mkdir {} && mv POSCAR-{} {}/POSCAR" ::: {001..xyz}` We also need to copy all the other input files (INCAR, POTCAR, KPOINTS, and run file) into each folder, `parallel "cd {} && cp ../run ." ::: {001..nnn}`.
 4. Change the # of NSW (the number of maximum ionic steps) into 0. We can also reduce KPOINTS grid.
 5. Submit all the calculations in each folder, command: `for i in {001..#}; do cd $i; sbatch runfile; cd ..; done` or `parallel "cd {} && sbatch run" ::: {001..nnn}`
 
